@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+:root{
+    --pri-color : #7373f1;
+    --sec-color: #2222;
+    --text-color: #fff;
+    --odd-color: #1c0ac4;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+
+header{
+    display: flex;
+    background-color: var(--odd-color);
+    align-items: center;
+    justify-content: space-around;
+}
+nav{
+
+    color: var(--text-color);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+  padding: 10px;
+}
+
+.logo{
+    
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Arial;
+    margin: .5rem;
+   position: absolute;
+   left: 20px;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+ul li{
+  margin: .5rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: none;
+  list-style-type: none;
+  
+    
+}
+ul a{
+  text-decoration:none;
+}
+.alerts{
+  display:none;
+  width: 100%;
+  text-align: center;
+}
+
+
+  /* Style the hero banner */
+  .hero {
+    background-image: url('img/pexels-agung-pandit-wiguna-3401403.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* margin-top: 4.7rem; */
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cta-button {
+    background-color: #fff;
+    border-radius: 25px;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 30px;
+    text-decoration: none;
+  }
+  .cta-btn{
+    background-color:var(--odd-color);
+    border-radius: 25px;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 30px;
+    text-decoration: none;
+  }
+  
+  .cta-button:hover,.cta-btn:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+ 
+
+  .admissions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .admissions-info {
+    flex: 1;
+    padding-right: 50px;
+  }
+  
+  .admissions-info h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow-y:hidden;
+  }
+  
+  .admissions-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .admissions-info ol {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  
+  .admissions-info ol li {
+    margin-bottom: 10px;
+  }
+  
+  .admissions-info p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .admissions-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .admissions-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+
+
+/* Desktop styles */
+.admissions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .admissions-info {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .admissions-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .admissions-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .admissions-info ol {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .admissions-image {
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+  
+  .admissions-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .admission-faq h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+  }
+  
+  .admission-faq p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+  
+  .faq-item {
+    margin-bottom: 30px;
+  }
+  
+  .faq-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .faq-answer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .faq-answer p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  
+  

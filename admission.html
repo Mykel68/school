@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+ 
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+ 
+       <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+<div class="alert alert-primary" role="alert"><strong>Warning!</strong><a href="#" class="alert-link">Click Here</a></div>
+
+
+
+
+
+    <header class="fixed-top">
+        <nav>
+            <div class="logo">ABC.</div>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href=""><li>About</li></a>
+              <a href="admission.html"><li>Admission</li></a>
+              <a href="newsfeed.html"><li>newsfeed</li></a>
+              <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </nav>
+      </header>
+ 
+     
+    <!-- Button trigger modal -->
+
+      <section class="hero">
+        
+     
+        <h1>Admission is on-going</h1>
+        <p>Come register your wards in our prestigious school.Admission into all classes</p>
+        <button type="button" class="btn btn-primary btn-lg cta-button" data-bs-toggle="modal" data-bs-target="#modalId">
+            Apply Now
+          </button>
+
+          <div class="alert  alerts alert-primary alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong>Admission Discount</strong> <br> 20% discount for full payment before  session starts
+          </div>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content text-bg-info">
+                          <div class="modal-header">
+                                  <h5 class="modal-title " id="modalTitleId">Get more help By visiting the 
+                                    <a href="#faq">FAQ section</a></h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+    <section class="admissions">
+        <div class="admissions-info">
+          <h2>Admissions</h2>
+          <p>We welcome applications from students of all backgrounds and abilities. Our admissions process is designed to identify students who will thrive in our academic community and contribute to our school's culture.</p>
+          <p>To apply, please follow the steps below:</p>
+          <ol>
+            <li>Fill out the online application form</li>
+            <li>Submit the application fee</li>
+            <li>Provide transcripts and test scores</li>
+            <li>Complete an interview with our admissions team</li>
+          </ol>
+          <p>If you have any questions about the admissions process or requirements, please contact our admissions office at admissions@school.edu or (123) 456-7890.</p>
+        </div>
+        <div class="admissions-image">
+          <img src="img/student studying.jpg" alt="Students studying">
+        </div>
+      </section>
+
+    
+    <section class="admission-faq" id="faq">
+        <div class="container">
+          <h2>Admissions FAQ</h2>
+          <p>Here are some frequently asked questions about our admissions process.</p>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>What are the admission requirements?</h3>
+              <div class="faq-answer">
+                <p>To apply, you must have a high school diploma or equivalent, submit an application, and meet our minimum GPA and test score requirements.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>How do I apply?</h3>
+              <div class="faq-answer">
+                <p>You can apply online or in person. Visit our admissions page for more information and to start your application.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>When is the application deadline?</h3>
+              <div class="faq-answer">
+                <p>The application deadline for our upcoming semester is August 1st. Please check our website for updates and changes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      
+</body>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script defer>
+const alt = document.querySelector('.alerts');
+const body =document.querySelector('section');
+
+
+    var alertList = document.querySelectorAll('.alert');
+    alertList.forEach(function (alert) {
+      new bootstrap.Alert(alert)
+    });
+    
+    function showing() {
+        alt.style.display = 'block';
+    };
+    body.addEventListener('mouseover', showing);
+  </script>
+</html>

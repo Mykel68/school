@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center">Application Form</h3>
+                <p class="text-center">Submit form before session starts</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="application-form">
+        <h2 class="section-heading">Application Form</h2>
+        <form action="applyprocess.php" method="POST" id="application-form">
+          <div class="form-group">
+            <label for="first-name">First Name*</label>
+            <input type="text" name="first-name" id="first-name" required>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name*</label>
+            <input type="text" name="last-name" id="last-name" required>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="tel" name="phone" id="phone" required>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="address">Address*</label>
+            <textarea name="address" id="address" required></textarea>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="program">Program of Interest*</label>
+            <select name="program" id="program" required>
+              <option value="">Select a program</option>
+              <option value="Program A">Program A</option>
+              <option value="Program B">Program B</option>
+              <option value="Program C">Program C</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <button type="submit">Submit Application</button>
+        </form>
+      </section>
+      
+<script src="apply.js"></script>
+
+
+
+<!-- ========== 
+    <?php
+
+if(isset($_POST['submit'])) {
+  
+  // Set the recipient email address
+  $to = "youremail@example.com";
+  
+  // Set the email subject
+  $subject = "New Application Form Submission";
+  
+  // Get the form data
+  $firstName = $_POST['first-name'];
+  $lastName = $_POST['last-name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $gender = $_POST['gender'];
+  $dob = $_POST['dob'];
+  $address = $_POST['address'];
+  $city = $_POST['city'];
+  $state = $_POST['state'];
+  $country = $_POST['country'];
+  $program = $_POST['program'];
+  $year = $_POST['year'];
+  $term = $_POST['term'];
+  $essay = $_POST['essay'];
+  
+  // Set the email message
+  $message = "First Name: ".$firstName."\n".
+             "Last Name: ".$lastName."\n".
+             "Email: ".$email."\n".
+             "Phone: ".$phone."\n".
+             "Gender: ".$gender."\n".
+             "Date of Birth: ".$dob."\n".
+             "Address: ".$address."\n".
+             "City: ".$city."\n".
+             "State: ".$state."\n".
+             "Country: ".$country."\n".
+             "Program: ".$program."\n".
+             "Year: ".$year."\n".
+             "Term: ".$term."\n".
+             "Essay: ".$essay."\n";
+  
+  // Set the email headers
+  $headers = "From: ".$email."\r\n".
+             "Reply-To: ".$email."\r\n".
+             "X-Mailer: PHP/".phpversion();
+  
+  // Send the email
+  if(mail($to, $subject, $message, $headers)) {
+    // If the email is sent successfully
+    echo "Thank you for your application! We will contact you soon.";
+  } else {
+    // If there is an error sending the email
+    echo "Sorry, there was an error sending your application. Please try again later.";
+  }
+  
+}
+
+?>
+
+    ========== -->
+    
+</body>
+</html>

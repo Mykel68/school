@@ -1,0 +1,207 @@
+<!-- Have to change it to contact.html to host on ?,, -->
+
+
+<?php
+include('connection.php');
+include('functions.php');
+
+
+login($con)
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us form in php</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   
+    <style>
+        body{
+            background-image: url(img/slide.jpg);
+            background-color: var(--bs-purple);
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            z-index: -1000;
+            position: absolute;
+            background-blend-mode: screen;
+        }
+        .logo{
+    
+    color: var(--bs-light);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Arial;
+   
+   text-align: center;
+
+}
+.container{
+    background-color:transparent;
+}
+header{
+    display: flex;
+    background-color: var(--bs-primary);
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #006F8E;
+}
+
+form .error {
+  border-color: red;
+}
+
+
+    </style>
+
+
+
+</head>
+<!-- <header class="fixed-top">
+    <nav>
+        <div class="logo">ABC.</div>
+  
+    </nav>
+  </header> -->
+<body >
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="card mt-5">
+                    <div class="card-title">
+                        <h2 class="text-center py-2">Contact us</h2>
+                        <p class="text-center" >We get back to you within 24hrs</p>
+                        <hr>
+                        <!-- Uncomment for php -->
+                        <!-- <?php
+                            $msg = "";
+                            if(isset($_GET['error']))
+                            {
+                                 $msg = "please fill the blank";
+                                  echo '<div class="alert alert-danger">
+                                   '.$msg.'
+                                </div>'; 
+                            }
+
+                            if(isset($_GET['success']))
+                            {
+                                $msg = "Your message has been sent";
+                                echo '<div class="alert alert-success">
+                                 '.$msg.'
+                              </div>'; 
+                            }
+                             
+                        ?> -->
+
+                    </div>
+                    <div class="card-body">
+                        <form action="contactprocess.php" method="post">
+                            <input type="text" name="uname" placeholder="user name" id="" class="form-control mb-2">
+                            <input type="email" name="email" placeholder="Email" id="" class="form-control mb-2">
+                            <input type="text" name="subject" placeholder="Subject" id="" class="form-control mb-2">
+                            <textarea name="msg" id=""  class="form-control mb-2" placeholder="Write a message.." ></textarea>
+                            <button class="btn btn-success" name="btn-send" > Send </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <?php
+if(isset($_POST['submit'])){
+    $to = "olowookeremicheal9568@gmail.com"; // Replace with your email address
+    $subject = "Contact Form Submission";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $headers = "From: " . $name . " <" . $email . ">\r\n" .
+               "Reply-To: " . $email . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+    
+    // Check if name, email, and message are filled out
+    if(!empty($name) && !empty($email) && !empty($message)){
+        // Validate email address
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            // Send email
+            if(mail($to, $subject, $message, $headers)){
+                echo '<p class="success">Your message has been sent successfully.</p>';
+            } else{
+                echo '<p class="error">Sorry, there was an error sending your message. Please try again later.</p>';
+            }
+        } else{
+            echo '<p class="error">Please enter a valid email address.</p>';
+        }
+    } else{
+        echo '<p class="error">Please fill out all required fields.</p>';
+    }
+}
+?> -->
+
+
+<!--
+    <form id="contact-form" method="post" action="contact.php" class="mt-5">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit" id="submit-button">Submit</button>
+</form>
+
+     -->
+<br>
+     <p id="demo" class="text-center" ></p>
+
+<script>
+document.getElementById("demo").innerHTML = Date();
+</script>
+
+    </body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</html>
+

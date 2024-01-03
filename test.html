@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Ladsmlnkh h orem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                    </p>
+                    <span>JOHN</span>
+                </div>
+            
+          
+                <div class="user-text active-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>kh ugibj hbi  ihLorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                    </p>
+                    <span>JOHN</span>
+              
+            </div>
+           
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                    </p>
+                    <span>JOHNs</span>
+            
+            </div>
+           
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Lorem ckl ihc  ipipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                    </p>
+                    <span>JOHNp</span>
+                </div>
+           
+                <div class="user-text">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Lorem ipsum do,m n 08fchb08y  lor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                    </p>
+                    <span>JOHNwd</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="img/bg.png" alt="" class="user-pic"onclick="showReview()" >
+                <img src="img/black.jpg" alt="" class="user-pic active-pic" onclick="showReview()">
+                <img src="img/FB_IMG_16787801196206554.jpg" alt="" class="user-pic" onclick="showReview()">
+                <img src="img/pexels-agung-pandit-wiguna-3401403.jpg" alt="" class="user-pic" onclick="showReview()">
+                <img src="img/pexels-caleb-oquendo-3042432.jpg" alt="" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+       function showReview(){
+            for(userPic of userPics){
+                userPic.classList.remove("active-pic");
+            }
+            for(userText of userTexts){
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+
+        }
+
+    </script>
+
+
+</body>
+</html>

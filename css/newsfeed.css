@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+:root{
+    --pri-color : #7373f1;
+    --sec-color: #2222;
+    --text-color: #fff;
+    --odd-color: #1c0ac4;
+
+}
+
+header{
+    display: flex;
+    background-color: var(--odd-color);
+    align-items: center;
+    justify-content: space-around;
+}
+nav{
+
+    color: var(--text-color);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+  padding: 10px;
+}
+
+.logo{
+    
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Arial;
+    margin: .5rem;
+   position: absolute;
+   left: 20px;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+ul li{
+  margin: .5rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-decoration: none;
+  list-style-type: none; 
+}
+ul a{
+  text-decoration:none;
+}
+.nav{
+    margin-top: 20vh;
+}
+.nav-item{
+  text-transform: lowercase;
+  font-weight: 500;
+
+}
+.nav-item a:checked{
+  text-decoration: underline;
+}
+.skicky.active nav{
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: #0062cc;
+   box-shadow: 0px 2px 5px 0px #ccc;
+   z-index: 100;
+
+
+}
+
+.faculty-staff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    margin-top: 10px;
+    
+  }
+  
+  .faculty-staff-info {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .faculty-staff-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    overflow-y:hidden;
+  }
+  
+  .faculty-staff-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .faculty-staff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:1em;
+    padding:0 10px; 
+  }
+  
+  .faculty-staff-item {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .faculty-staff-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .faculty-staff-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+  }
+  
+  .faculty-staff-item p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+/*   
+  .campus-life {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  } */
+  
+  .campus-life h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    text-align: center;
+  }
+  
+  .campus-life p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  /* .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+   */
+  .campus-life-card {
+    max-width: 300px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .campus-life-card img {
+    max-width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  
+  .campus-life-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+
+  }
+  
+  .campus-life-card p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .news-events {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  .news-events.hidden {
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    margin-top: -50px;
+  }
+  
+  .news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 5vw;
+  }
+  
+  .news-events h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    overflow-y:hidden;
+  }
+  
+  .news-item {
+    margin-bottom: 30px;
+  }
+  
+  .news-item h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    overflow-y: hidden;
+  }
+  
+  .news-date {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .news-description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .load-more {
+    display: block;
+    margin: 40px auto 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .load-more:hover {
+    background-color: #0062cc;
+  }
+  
+  .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px
+  }  
+  .hidden{
+    display: none;
+  }
+  .slides img {
+      height:300px;
+      
+  }
+
+  
+.testimonial-container{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #effdff;
+}
+.testimonial{
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+.testimonial-container h3{
+  margin-top: 100px;
+  overflow-y: hidden;
+}
+.testimonial-text{
+  background: #7700ff;
+  color: #fff;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.user-text{
+  width: 80%;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.user-text.fa{
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.user-text span{
+  display: block;
+  font-size: 13px;
+  margin-top: 70px;
+  font-weight: 500;
+  text-transform: uppercase;
+}  
+.testimonial-pic{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-pic{
+  width: 65px;
+  aspect-ratio: 1/ 1;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+.user-text.active-text{
+  display: block;
+  animation: moveup 0.5s linear forwards ;
+}
+.user-pic.active-pic{
+  width: 100px;
+  border: 3px solid #7700ff;
+}
+@keyframes moveup{
+  0%{
+      margin-top: 25px;
+  }
+  100%{
+      margin-top: 0px;
+  }
+}
+
+.title{
+ line-height: 30px;
+ overflow-y: hidden;
+ display: none;
+}
+.title.active-h6{
+  display: block;
+  text-align: center;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  margin: 10px;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/newsfeed.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" />
+
+    
+
+ 
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="logo">ABC.</div>
+            <ul>
+              <a href="index.html"><li>Home</li></a>
+              <a href=""><li>About</li></a>
+              <a href="admission.html"><li>Admission</li></a>
+              <a href="newsfeed.html"><li>newsfeed</li></a>
+              <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </nav>
+      </header>
+      
+<section class="skicky">
+     <nav class="navbar navbar-expand navbar-light bg-primary sticky">
+         <div class="container   ">
+           <ul class="navbar-nav  mt-2 mt-lg-0 ">
+                 <li class="nav-item">
+                     <a class="nav-link active" href="#facultys" aria-current="page">FACULTY&STAFF <span class="visually-hidden">(current)</span></a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="#campus-life">CAMPUSLIFE</a>
+                 </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="#news-events">NEWSEVENT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+          </li>
+                 
+             </ul>
+             <!-- <form class="d-flex my-2 my-lg-0">
+                 <input class="form-control me-sm-2" type="text" placeholder="Search">
+                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+             </form> -->
+         </div>
+     </nav>
+    </section>
+
+      <section class="faculty-staff " id="facultys">
+        <div class="faculty-staff-info ">
+          <h2>Faculty and Staff</h2>
+          <p>Our school is proud to have a team of dedicated and experienced educators who are passionate about teaching and fostering a love of learning in their students. Our staff members work tirelessly behind the scenes to ensure that our school runs smoothly and efficiently.</p>
+          <p>If you would like to get in touch with a specific faculty or staff member, please visit our <a href="staff-directory.html">staff directory</a>.</p>
+        </div>
+        <div class="faculty-staff-grid">
+          <div class="faculty-staff-item">
+            <img src="img/pexels-vanessa-garcia-6326377.jpg" alt="Faculty member">
+            <h3>John Smith</h3>
+            <p>Mathematics Teacher</p>
+          </div>
+          <div class="faculty-staff-item">
+            <img src="img/pexels-katerina-holmes-5905483.jpg" alt="Faculty member">
+            <h3>Jane Doe</h3>
+            <p>English Teacher</p>
+          </div>
+          <div class="faculty-staff-item">
+            <img src="img/pexels-max-fischer-5212361.jpg" alt="Faculty member">
+            <h3>David Lee</h3>
+            <p>Science Teacher</p>
+          </div>
+          <div class="faculty-staff-item">
+            <img src="img/pexels-vanessa-garcia-6326377.jpg" alt="Faculty member">
+            <h3>John Smith</h3>
+            <p>Mathematics Teacher</p>
+          </div>
+        </div>
+      </section>
+
+      
+  <section class="campus-life " id="campus-life">
+    <div class="container mt-5">
+      <h2 class="mt-5">Campus Life</h2>
+      <p>Get involved and experience campus life outside of the classroom.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="campus-life-card">
+            <img src="img/pexels-zen-chung-5538633.jpg" alt="Campus Life Image">
+            <h3>Student Organizations</h3>
+            <p>Join one of our many student organizations that cater to your interests and passions.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="campus-life-card">
+            <img src="img/pexels-pixabay-267761.jpg" alt="Campus Life Image">
+            <h3>Athletics and Sports</h3>
+            <p>Stay active and participate in our athletics and sports programs. We offer a variety of sports for all skill levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="campus-life">
+    <h2 class="section-heading">Campus Gallery</h2>
+    <p class="text-center">Tap image to view</p>
+    <div class="image-gallery">
+      <div class="image">
+        <img src="img/bg.png" alt="Campus Image">
+      </div>
+      <div class="image">
+        <img src="img/black.jpg" alt="Campus Image">
+      </div>
+      <div class="image">
+        <img src="img/FB_IMG_16787801196206554.jpg" alt="Campus Image">
+      </div>
+      <div class="image">
+        <img src="img/pexels-alfin-auzikri-2968077.jpg" alt="Campus Image">
+      </div>
+    </div>
+  
+  <script>
+    // Get all the images in the gallery
+  var galleryImages = document.querySelectorAll('.image img');
+  
+  // Add a click event listener to each image
+  galleryImages.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // Create a new lightbox element and image element
+      var lightbox = document.createElement('div');
+      lightbox.classList.add('lightbox');
+      var lightboxImage = document.createElement('img');
+      lightboxImage.src = image.src;
+      
+      // Add the image to the lightbox
+      lightbox.appendChild(lightboxImage);
+      
+      // Create a close button for the lightbox
+      var closeButton = document.createElement('span');
+      closeButton.classList.add('lightbox-close');
+      closeButton.innerHTML = '&times;';
+      
+      // Add the close button to the lightbox
+      lightbox.appendChild(closeButton);
+      
+      // Add the lightbox to the page
+      document.body.appendChild(lightbox);
+      
+      // Add a click event listener to the close button
+      closeButton.addEventListener('click', function() {
+        // Remove the lightbox from the page
+        document.body.removeChild(lightbox);
+      });
+    });
+  });
+  
+  </script>
+  
+  
+  </section>
+
+  
+  <section class="news-events" id="news-events">
+    <div class="news-container mt-5">
+      <h2>News and Events</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <h3>Graduation Ceremony</h3>
+          <p class="news-date">May 20, 2023</p>
+          <p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod augue vitae ligula bibendum lobortis. Sed hendrerit magna ut odio gravida malesuada.</p>
+        </div>
+        <div class="news-item">
+          <h3>School Play</h3>
+          <p class="news-date">March 5, 2023</p>
+          <p class="news-description">Phasellus feugiat urna ac tortor maximus, sit amet tincidunt tellus vestibulum. Suspendisse potenti. Nunc id libero vel enim facilisis maximus at non mauris.</p>
+        </div>
+        <div class="news-item">
+          <h3>Volunteer Fair</h3>
+          <p class="news-date">April 15, 2023</p>
+          <p class="news-description">Maecenas eget ligula at nisi tempor facilisis. Sed vitae elit dictum, ultricies lacus a, efficitur enim. Ut vitae felis tellus. Donec eget bibendum turpis.</p>
+        </div>
+      </div>
+      <button class="load-more">Load More</button>
+    </div>
+  </section>
+    
+
+  <section class="news-events hidden ">
+    <div class="container">
+      
+        <div class="news-item">
+          <h3>Community Service Day</h3>
+          <p class="news-date">February 15, 2023</p>
+          <p class="news-description">Proin at efficitur velit. Sed sagittis ex a augue vulputate, ut malesuada nisi mollis. Donec id erat dui. Integer sit amet felis massa.</p>
+        </div>
+        <div class="news-item">
+          <h3>Parent-Teacher Conference</h3>
+          <p class="news-date">November 3, 2022</p>
+          <p class="news-description">Duis fermentum, risus eget tincidunt tempor, justo nisi elementum libero, in finibus augue sapien vel ipsum. Ut vel sodales risus.</p>
+        </div>
+        <div class="news-item">
+          <h3>Science Fair</h3>
+          <p class="news-date">October 12, 2022</p>
+          <p class="news-description">Vivamus feugiat lacinia velit, at lobortis quam volutpat sit amet. Vestibulum a lacinia felis. Sed vel tortor eget mauris interdum placerat non vel augue.</p>
+        </div>
+        <div class="news-item">
+          <h3>School Trip</h3>
+          <p class="news-date">September 15, 2022</p>
+          <p class="news-description">Suspendisse potenti. Morbi bibendum ante ut velit vehicula, vel fermentum mauris semper. Nulla ut aliquam massa. Suspendisse potenti.</p>
+        </div>
+        <div class="news-item">
+          <h3>Sports Tournament</h3>
+          <p class="news-date">August 20, 2022</p>
+          <p class="news-description">
+            </p>
+        </div>
+</div>
+</section>
+
+<section id="testimonials" class="">
+  
+  <div class="testimonial-container ">
+    <h3 class="text-center">Hear What People Say About Us</h3>
+    <div class="testimonial mt-5">
+        <div class="testimonial-text ">
+            <div class="user-text active-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Ladsmlnkh h orem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                </p>
+                <span>JOHN</span>
+            </div>
+        
+      
+            <div class="user-text ">
+                <i class="fas fa-quote-left"></i>
+                <p>kh ugibj hbi  ihLorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                </p>
+                <span>JOHN</span>
+          
+        </div>
+       
+            <div class="user-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                </p>
+                <span>JOHNs</span>
+        
+        </div>
+       
+            <div class="user-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Lorem ckl ihc  ipipsum dolor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                </p>
+                <span>JOHNp</span>
+            </div>
+       
+            <div class="user-text">
+                <i class="fas fa-quote-left"></i>
+                <p>Lorem ipsum do,m n 08fchb08y  lor sit, amet consectetur adipisicing elit. Accusantium laboriosam voluptatum debitis sit. Vero vitae consequuntur commodi esse eligendi eos atque eveniet voluptate voluptatem culpa?
+                </p>
+                <span>JOHNwd</span>
+            </div>
+        </div>
+        <div class="testimonial-pic">
+          <div>
+            <img src="img/bg.png" alt="" class="user-pic active-pic"onclick="showReview()" >
+            <h6 class="title active-h6">PTA-CHAIRMAN</h6>
+          </div>
+          <div>
+            <img src="img/black.jpg" alt="" class="user-pic " onclick="showReview()">
+            <h6 class="title">HEAD PREFECT</h6>
+          </div>
+          <div>
+            <img src="img/FB_IMG_16787801196206554.jpg" alt="" class="user-pic" onclick="showReview()">
+            <h6 class="title">PARENT</h6>
+          </div>
+          <div>
+            <img src="img/pexels-agung-pandit-wiguna-3401403.jpg" alt="" class="user-pic" onclick="showReview()">
+            <h6 class="title">MINISTER</h6>
+          </div>
+          <div>
+            <img src="img/pexels-caleb-oquendo-3042432.jpg" alt="" class="user-pic" onclick="showReview()">
+            <h6 class="title">GOVERNMENT</h6>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let userTexts = document.getElementsByClassName("user-text");
+    let userPics = document.getElementsByClassName("user-pic");
+    let titles = document.getElementsByClassName("title");
+
+   function showReview(){
+        for(userPic of userPics){
+            userPic.classList.remove("active-pic");
+        }
+        for(userText of userTexts){
+            userText.classList.remove("active-text");
+        }
+        for(title of titles){
+            title.classList.remove("active-h6");
+        }
+
+        let i = Array.from(userPics).indexOf(event.target);
+
+        userPics[i].classList.add("active-pic");
+        userTexts[i].classList.add("active-text");
+        titles[i].classList.add("active-h6");
+
+    }
+
+</script>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- <div class="flexslider">
+  <ul class="slides">
+    <li><img src="img/pexels-max-fischer-5212361.jpg" alt="Image 1"></li>
+    <li><img src="img/pexels-zen-chung-5538633.jpg" alt="Image 2"></li>
+    <li><img src="img/pexels-pixabay-267761.jpg" alt="Image 3"></li>
+    <li><img src="img/pexels-max-fischer-5212361.jpg" alt="Image 1"></li>
+    <li><img src="img/pexels-zen-chung-5538633.jpg" alt="Image 2"></li>
+    <li><img src="img/pexels-pixabay-267761.jpg" alt="Image 3"></li>
+    <li><img src="img/pexels-max-fischer-5212361.jpg" alt="Image 1"></li>
+    <li><img src="img/pexels-zen-chung-5538633.jpg" alt="Image 2"></li>
+    <li><img src="img/pexels-pixabay-267761.jpg" alt="Image 3"></li>
+    <li><img src="img/pexels-max-fischer-5212361.jpg" alt="Image 1"></li>
+    <li><img src="img/pexels-zen-chung-5538633.jpg" alt="Image 2"></li>
+    <li><img src="img/pexels-pixabay-267761.jpg" alt="Image 3"></li>
+  </ul>
+</div> -->
+
+<!-- <button id="add-slide">Add Slide</button>
+<button id="remove-slide">Remove Slide</button>
+
+<script>
+$(document).ready(function(){
+  var slider = $('.flexslider').flexslider({
+    animation: "slide"
+  }).data('flexslider');
+
+  $('#add-slide').click(function(){
+    slider.addSlide('<li><img src="image4.jpg" alt="Image 4"></li>');
+  });
+
+  $('#remove-slide').click(function(){
+    slider.removeSlide(slider.currentSlide);
+  });
+});
+</script> -->
+
+<!--        
+<div class="flexslider">
+  <ul class="slides">
+    <li><img src="img/pexels-pixabay-267761.jpg" alt="Image 3"></li>
+    <li><img src="img/pexels-zen-chung-5538633.jpg" alt="Image 2"></li>
+    <li><img src="img/pexels-max-fischer-5212361.jpg" alt="Image 1"></li>
+  </ul>
+  <div class="flexslider-thumbnails">
+    <ul class="slides">
+      <li><img src="iMG/bg.png" alt="Thumbnail 1"></li>
+      <li><img src="img/black.jpg" alt="Thumbnail 2"></li>
+      <li><img src="img/images_003.jpg" alt="Thumbnail 3"></li>
+    </ul>
+  </div>
+</div> -->
+
+<script>
+$(document).ready(function(){
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    directionNav: true,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 200,
+    itemMargin: 5,
+    asNavFor: '.flexslider-thumbnails'
+  });
+
+  $('.flexslider-thumbnails').flexslider({
+    animation: "slide",
+    controlNav: false,
+    directionNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 100,
+    itemMargin: 5,
+    asNavFor: '.flexslider'
+  });
+});
+</script>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+
+        <script>
+            
+        
+            const hidden = document.querySelector('.hidden');
+            const load = document.querySelector('.load-more');
+             
+              load.onclick = function(){
+               hidden.style.display = "block";
+               load.style.display = "none";
+              };
+        
+        </script>
+        <script>
+$(document).ready(function(){
+  $('.flexslider').flexslider({
+    animation: "slide",
+    slideshowSpeed: 4000,
+    animationSpeed: 600,
+    controlNav: false,
+    directionNav: true
+  });
+});
+</script>
+
+
+<script>
+  var skicky =document.querySelector('.skicky');
+  window.addEventListener('scroll',scrolFunction);
+
+  function scrolFunction(){
+    if(window.scrollY > 100){
+      skicky.classList.add('active');
+    }
+    else
+    {
+      skicky.classList.remove('active');
+    }
+  }
+
+
+</script>
+
+    
+</body>
+</html>
